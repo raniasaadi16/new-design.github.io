@@ -11235,6 +11235,8 @@ ul.countdown-pr li span {
   display: block;
   margin: auto;
   border-radius: 5px;
+  background: #B1E1F4;
+  color: #1B77B1;
 }
 
 ul.countdown-pr li.seperator {
@@ -12062,9 +12064,6 @@ header.buss .clip {
   min-height: 285px;
 }
 
-.pric-2 .bg-ov {
-  min-height: 233px;
-}
 .pric-2 .min-h {
   min-height: 244px;
 }

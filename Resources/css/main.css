@@ -11218,12 +11218,14 @@ ul.countdown-pr {
   list-style: none;
   padding: 0;
   text-align: center;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-bottom: 0;
 }
 
 ul.countdown-pr li {
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 ul.countdown-pr li span {
@@ -11233,8 +11235,6 @@ ul.countdown-pr li span {
   display: block;
   margin: auto;
   border-radius: 5px;
-  background: #B1E1F4;
-  color: #1B77B1;
 }
 
 ul.countdown-pr li.seperator {

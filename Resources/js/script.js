@@ -227,3 +227,31 @@ if (document.querySelector('.show-less-div-2')) {
         showLessLine: 5
     });
 }
+
+if (document.getElementById("countdown")) {
+    const countdown = document.querySelectorAll("#countdown")
+    countdown.forEach(count => {
+        var countDownDate = new Date(count.getAttribute('data-date')).getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            count.innerHTML = days + " D  : " + hours + " H  : " +
+                minutes + " M  : " + seconds + " S   ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                count.innerHTML = "";
+            }
+        }, 1000);
+
+    })
+
+}

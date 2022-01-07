@@ -12058,7 +12058,7 @@ header.buss .clip {
 }
 
 .pric-4 .bg-ov {
-  min-height: 270px;
+  min-height: 150px;
 }
 .pric-4 .min-h {
   min-height: 285px;
@@ -12242,6 +12242,12 @@ header.buss .clip {
 }
 .membership .icon-bg {
   background: #E8F7FD;
+}
+
+.centered-logo {
+  height: 150px;
+  margin: auto;
+  display: block;
 }
 
 .alumni {

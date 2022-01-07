@@ -237,21 +237,35 @@ if (document.getElementById("countdown")) {
 
             var now = new Date().getTime();
             var distance = countDownDate - now;
-
+           // console.log('distance :' + distance)
+            if (distance < 0) {
+                // clearInterval(x);
+                // count.innerHTML = "";
+                countDownDate = now + 7*60*60*1000;
+                distance = countDownDate - now;
+            }
+            
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
 
             count.innerHTML = days + " D  : " + hours + " H  : " +
                 minutes + " M  : " + seconds + " S   ";
 
-            if (distance < 0) {
-                clearInterval(x);
-                count.innerHTML = "";
-            }
         }, 1000);
 
     })
 
+}
+
+if(document.querySelector('#date-table')){
+    document.querySelectorAll('#date-table').forEach(offer => {
+        const endDate = new Date(offer.getAttribute('data-date')).getTime()
+        let currentDate = new Date().getTime()
+        if(endDate < currentDate){
+            offer.classList.add('text-decoration-line-through')
+        }
+    })
 }
